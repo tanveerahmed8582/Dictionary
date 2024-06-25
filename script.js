@@ -16,7 +16,7 @@ const getWordInfo = async(word) => {
 
 resultDiv.innerHTML = `
 <h2><strong>Word: </strong>${data[0].word}</h2>
-<p>${data[0].meanings[0].partOfSpeech}</p>
+<p class="partOfSpeech">${data[0].meanings[0].partOfSpeech}</p>
 <p><strong>Meaning: </strong>${definitions.definition === undefined ? "Not Found" : definitions.definition}</p>
 <p><strong>Example: </strong>${definitions.example === undefined ? "Not Found" : definitions.example}</p>
 <p><strong>Antonyms: </strong></p>
@@ -35,7 +35,7 @@ else{
 
 //Adding Read More Button
 
-resultDiv.innerHTML += `<a href="${data[0].sourceUrls}" target="_blank">Read More</a>`
+resultDiv.innerHTML += `<div><a href="${data[0].sourceUrls}" target="_blank">Read More</a></div>`
   } 
   catch (error) {
     resultDiv.innerHTML = `<p>Sorry, the word could not be found</p>`
