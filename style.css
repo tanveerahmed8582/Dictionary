@@ -92,6 +92,16 @@ color: #ffffff;
 .result li{
   padding: 6px;
   margin-left: 20px;
-
-
 }
+
+@media screen and (max-width:320px){
+  main form{
+    flex-direction: column;
+  }
+  
+  form button[type="submit"]{
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
+
